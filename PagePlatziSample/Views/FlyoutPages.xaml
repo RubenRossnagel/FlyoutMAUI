@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagePlatziSample.Views.FlyoutPages"
+             x:Name="myFlyoutPage"
+            Title="Demo FlyoutPage" FlyoutLayoutBehavior="Default">
+    <FlyoutPage.Flyout>
+        <ContentPage Background="red" Title="Content">
+            <StackLayout>
+                <Label Text="Menu Flayout" TextColor="Black" FontSize="45" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label></Label>
+                <Label Text="01-Pagina 1" FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPage1Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label></Label>
+                <Label Text="02-Pagina 2" FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPage2Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label></Label>
+                <Label Text="03-Pagina 3" FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPage3Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label></Label>
+                <Label Text="04-Redireccionar page 4"  FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPage4Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="" Background="white">
+                    <StackLayout>
+                        <Button Text="X" Clicked="OnShowMenuClicked" TextColor="Black" BorderColor="Black" HorizontalOptions="End" VerticalOptions="End"/>
+                        <Label Text="Pagina Principal" TextColor="Black" FontSize="45" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+
+</FlyoutPage>
